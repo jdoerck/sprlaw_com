@@ -1,6 +1,6 @@
-.idea/*
+.idea/
 
-Wordpress/*
-plugins/*
+Wordpress/
+plugins/
 
 content/wp-content/themes/sprlaw/.sass-cache
