@@ -1,0 +1,31 @@
+
+RewriteEngine On
+
+RewriteRule ^(.*).shtml$ http://www.sprlaw.com/ [L,R=301]
+
+
+# RewriteCond %{HTTP_HOST} ^blog.sprlaw.com$ [OR]
+# RewriteCond %{HTTP_HOST} ^www.blog.sprlaw.com$
+# RewriteRule ^(.*)$ http://www.sprlaw.com/blog [L,R=301]
+
+# RewriteCond %{HTTP_HOST} blog.sprlaw.com
+# RewriteCond %{REQUEST_URI} !blog/
+# RewriteRule ^(.*)$ blog/$1 [L]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# RewriteRule ^(.*)\.shtml$ http://www.sprlaw.com/ [L]
+
+
+
+

@@ -1,0 +1,157 @@
+//Footer
+
+.footer-container {
+  background: $body_blue;
+  background: url('../_i/footer_manhatten4.gif') $body_blue repeat-x;
+  height: 534px;
+}
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.footer.ipad {
+  padding-bottom: 50px;
+}
+
+.footer .foot_contact {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.foot-span-block {
+}
+
+.footer #footer_contact_us, .footer #footer_contact_us h3 {
+  font-size: 14px;
+  font-family: $font_family;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.footer #footer_contact_us h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 12px 0 0 0;
+}
+
+.footer #footer_contact_us h3 a {
+  color: #00adee;
+}
+
+
+.footer #footer_contact_us span {
+  color: #5c6b74;
+}
+
+.footer #awards {
+  text-align: right;
+}
+
+.footer #awards a {
+  background: $sprite no-repeat;
+  display: inline-block;
+}
+
+.footer #awards a.chambers {
+  background-position: -72px -2px;
+  height: 72px;
+  width: 53px;
+}
+
+.footer #awards a.best {
+  background-position: 0 -2px;
+  height: 72px;
+  width: 72px;
+}
+
+.footer #awards a.super {
+  background-position: -125px -2px;
+  height: 30px;
+  width: 128px;
+  margin: 0 10px 0 20px;
+  position: relative;
+  top: -20px;
+}
+
+.footer #footer_icons a {
+  background: $sprite no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.footer #footer_icons a.twitter {
+  background-position: -125px -32px;
+}
+.footer #footer_icons a.linkedin {
+  background-position: -155px -32px;
+  margin: 0 5px;
+}
+.footer #footer_icons a.rss {
+  background-position: -185px -32px;
+  display: none;
+}
+
+.footer #awards a span, .footer #footer_icons a span {
+  position: relative;
+  text-indent: -9999px;
+  display: block;
+}
+
+.footer #footer_colophon {
+  text-align: right;
+}
+.footer #footer_colophon, .footer #footer_colophon a {
+  color: #546067;
+  font-size: 12px;
+}
+
+.footer #footer_colophon ul {
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.footer #footer_colophon ul li {
+  display: inline;
+  margin-left: 20px;
+}
+body.mobile .footer #footer_colophon ul li {
+  margin-left: 5px;
+}
+
+body.mobile .footer #footer_colophon ul li:first-child {
+  margin-left: 0;
+}
+
+.footer-container p.disclaimer {
+  font-size: 12px;
+  color: #546067;
+  line-height: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.footer-widget {
+  padding: 0 10px 0 10px;
+  text-align: left;
+}
+
+
+.footer-widget p.copy {
+}
+
+.footer-widget strong {
+  font-weight: 600;
+}
+
+.footer-widget a {
+  color: #00ADEE;
+}
+
+.footer-widget .phone_num {
+  padding: 0 20px;
+}

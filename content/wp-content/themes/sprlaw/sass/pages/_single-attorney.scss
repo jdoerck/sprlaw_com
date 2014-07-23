@@ -1,0 +1,83 @@
+body.single-attorney h1 {
+  margin-bottom: 0;
+}
+
+body.single-attorney h2 {
+  font-weight: 300;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  color: #86a084;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+body.single-attorney h4 {
+  margin: 0 0 20px 0;
+  padding-top: 0;
+}
+
+body.single-attorney .row.info {
+  max-height: 1.5em;
+  overflow: hidden;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+body.single-attorney #attorney_profile.row.info {
+  max-height: 2000px;
+  text-transform: none;
+}
+
+body.single-attorney .row.info .span1 {
+  text-transform: uppercase;
+  color: #86a084;
+}
+
+body.single-attorney #attorney_experience {
+  margin-top: 30px;
+}
+
+body.single-attorney img.bio_pic {
+  margin-bottom: 0;
+}
+
+body.single-attorney .contact a {
+  border: 0;
+  line-height: 30px;
+  font-weight: bold;
+  color: #00ADEE !important;
+  font-size: 11px;
+}
+
+body.single-attorney .items a {
+  line-height: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+body.single-attorney .items span {
+  display: inline-block;
+  margin: 5px 10px 0 0;
+  background-image: $sprite;
+  background-repeat: no-repeat;
+  width: 19px !important;
+  height: 19px !important;
+  float: left;
+
+}
+
+body.single-attorney .items span:hover {
+  text-decoration: none;
+}
+
+body.single-attorney .contact_info.email span {
+  background-position: -275px -66px;
+}
+
+body.single-attorney .contact_info.phone span {
+  background-position: -250px -67px;
+}
+
+body.single-attorney .contact_info.vcard span {
+  background-position: -306px -65px;
+}
