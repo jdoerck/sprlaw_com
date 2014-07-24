@@ -203,9 +203,9 @@ if(is_ipad()){
 						<td>2003</td>
 						<td>Chappaqua,&nbsp;NY</td>
 					</tr></tbody>
-					<tfoot>
-					<tr><td colspan="4" class="show_more_results"><a href="/results/" id="more_results">+ More Results</a></td></tr>
-					</tfoot>
+<!--					<tfoot>-->
+<!--					<tr><td colspan="4" class="show_more_results"><a href="/results/" id="more_results">+ More Results</a></td></tr>-->
+<!--					</tfoot>-->
 
 				</table>
 
