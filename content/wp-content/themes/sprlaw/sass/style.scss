@@ -31,6 +31,10 @@ body.mobile .main_attorneys_link .atty_list, body.mobile .main_results_link tabl
   display: none !important;
 }
 
+
+
+
+
 .container {
   max-width: 960px;
 }
@@ -42,7 +46,6 @@ body {
   background: $body_blue;
   font-family: $font_family;
 }
-
 .content-page {
   background: $body_blue; /* Old browsers */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmM2Y0YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxOTJkMzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -259,10 +262,9 @@ body.single-attorney .content {
   margin-left: 0;
 }
 
-body.single-attorney .span2.img, body.single-attorney .span4.contact {
+body.single-attorney .span2.img {
   background: url('../_i/bkg_grid.png') repeat-x;
   height: 800px;
-
 }
 
 body.single-attorney .img .grid, body.single-attorney .contact .grid {
@@ -281,16 +283,7 @@ body.single-attorney .contact {
 }
 
 body.single-attorney .contact .items {
-  min-height: 110px;
-  padding: 40px 25px;
-  background: rgb(10,15,18); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(10,15,18,1) 0%, rgba(34,54,62,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(10,15,18,1)), color-stop(100%,rgba(34,54,62,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(10,15,18,1) 0%,rgba(34,54,62,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(10,15,18,1) 0%,rgba(34,54,62,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(10,15,18,1) 0%,rgba(34,54,62,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(10,15,18,1) 0%,rgba(34,54,62,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0f12', endColorstr='#22363e',GradientType=0 ); /* IE6-9 */
+
 
   -webkit-box-shadow: 0px 24px 15px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0px 24px 15px rgba(0, 0, 0, 0.12);
@@ -363,19 +356,6 @@ body.single-attorney img.bio_pic {
   margin-bottom: 0;
   /*width: 150px;*/
   /*border: 10px solid #0f191d;*/
-}
-
-body.single-attorney .contact a {
-  /*width: 100%;*/
-  /*display: block;*/
-  border: 0;
-  /*text-align: center;*/
-  /*height: 30px;*/
-  line-height: 30px;
-  font-weight: bold;
-  color: #00ADEE !important;
-  /*background: url('../_i/bkg_white3.png');*/
-  font-size: 11px;
 }
 
 /*Map Page*/
@@ -1387,11 +1367,6 @@ body.single-attorney .title-content, body.single-attorney .main-content, body.si
   padding: 0 6px;
 }
 
-body.single-attorney .span4.contact {
-  margin-right: 0;
-}
-
-
 body.postid-2673 h1.expertise-title {
   display: none;
 }
@@ -1401,7 +1376,6 @@ body.postid-2673 h1.expertise-title {
   padding: 0px 0 12px;
   line-height: 11px;
 }
-
 
 body.single-expertise .expertise-content {
   padding: 36px;
@@ -1899,21 +1873,25 @@ body.single-expertise .expertise-content {
   margin-left: 0;
   -webkit-box-shadow: 0px 12px 30px 6px rgba(10, 15, 18, 0.35);
   -moz-box-shadow: 0px 12px 30px 6px rgba(10, 15, 18, 0.35);
-  box-shadow: 0px 12px 30px 6px rgba(10, 15, 18, 0.35); }
+  box-shadow: 0px 12px 30px 6px rgba(10, 15, 18, 0.35);
+}
 
 /* RYAN'S ADDITIONS 05-01-2014
 ----------------------------------*/
 body.single-attorney .span6.content {
-  margin: 0 0 36px 0; }
+  margin: 0 0 36px 0;
+}
 
 .post-accordion-atty-bio {
   background-color: #23383f;
   padding: 30px 20px 20px 20px;
-  margin: 20px 0 20px 0; }
+  margin: 20px 0 20px 0;
+}
 
 div.post-accordion-atty-bio h5 {
   padding: 0 0 0 0;
-  margin: 12px 0 16px 0; }
+  margin: 12px 0 16px 0;
+}
 
 div.post-accordion-atty-bio ul li {
   padding-bottom: 14px;
@@ -1921,42 +1899,46 @@ div.post-accordion-atty-bio ul li {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  color: #d1d1d1; }
-
-
+  color: #d1d1d1;
+}
 
 /* RYAN'S ADDITIONS 05-05-2014
 ----------------------------------*/
-
 #content .span12 {
   width: 950px;
   padding-left: -5px;
-  border:0px solid red;
+  border: 0px solid red;
 }
 
 article .page-header img.photo {
   float: left;
   margin: 0 10px 10px 0;
-  width: 40px;}
+  width: 40px;
+}
 
 /* RYAN'S ADDITIONS 05-08-2014
 ----------------------------------*/
 .wp-caption {
-  width: 100% !important;}
+  width: 100% !important;
+}
 
 body.page-id-2575 .contacts {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 body.page-id-2575 .contacts div.address {
-  width: 314px; }
+  width: 314px;
+}
 
-body.page-id-2575 .contacts div.phone{
+body.page-id-2575 .contacts div.phone {
   margin-left: 0;
-  width: 313px; }
+  width: 313px;
+}
 
-body.page-id-2575 .contacts div.email{
+body.page-id-2575 .contacts div.email {
   margin-left: 0;
-  width: 313px; }
+  width: 313px;
+}
 
 body.page-id-2575 .contacts div.email .icon {
   margin-bottom: 0;
@@ -1968,58 +1950,86 @@ body.page-id-2575 p {
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-
   body.page-id-2575 .contacts div.address {
-	width: 32%; }
+	width: 32%;
+  }
 
-  body.page-id-2575 .contacts div.phone{
+  body.page-id-2575 .contacts div.phone {
 	margin-left: 0;
-	width: 33%;}
+	width: 33%;
+  }
 
-  body.page-id-2575 .contacts div.email{
+  body.page-id-2575 .contacts div.email {
 	margin-left: 0;
-	width: 32%;}
+	width: 32%;
+  }
 }
 
-
-
 @media (max-width: 767px) {
-
   body.page-id-2575 .contacts div.address {
-	width: 100%; }
-
-  body.page-id-2575 .contacts div.phone{
-	margin-left: 0;
-	width: 100%;}
-
-  body.page-id-2575 .contacts div.email{
 	width: 100%;
-	border-bottom: 0px solid #2f4953;}
+  }
+
+  body.page-id-2575 .contacts div.phone {
+	margin-left: 0;
+	width: 100%;
+  }
+
+  body.page-id-2575 .contacts div.email {
+	width: 100%;
+	border-bottom: 0px solid #2f4953;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-
   body.page-id-2575 .contacts .span4, body.page-id-2575 .contacts .overlay {
 	height: auto;
-	background: transparent; }
+	background: transparent;
+  }
 
   body.page-id-2575 .contacts .overlay {
 	padding: 15px 0 10px 0;
 	width: 80%;
 	margin: 0 auto;
 	border-top: 1px solid #435e69;
-	border-bottom: 1px solid #2f4953; }
+	border-bottom: 1px solid #2f4953;
+  }
 
   body.page-id-2575 .contacts .icon {
-	margin: 0; }
+	margin: 0;
+  }
 
   body.page-id-2575 .contacts div.email .icon {
-	margin: 15px 0 0 0; }
+	margin: 15px 0 0 0;
+  }
 
   body.page-id-2575 .contacts div.email div.overlay {
 	border-top: 1px solid #435e69;
-	border-bottom: 0px solid #2f4953; }
-
+	border-bottom: 0px solid #2f4953;
+  }
 }
 
+/* RYAN'S ADDITIONS 05-15-2014
+----------------------------------*/
+.main_results_link td {
+  padding: 5px 5px !important;
+  line-height: 12px;
+}
+
+.table-spr tbody tr:nth-child(odd) {
+  background: rgba(71, 109, 125, 0.3);
+}
+
+.table-spr tbody tr:nth-child(even) {
+  background: rgba(21, 34, 40, .7);
+}
+
+.table-spr tbody tr:hover {
+  background: rgba(71, 109, 125, 0.5);
+}
+
+#content li {
+  line-height: 20px;
+  padding-bottom: 10px;
+}
 

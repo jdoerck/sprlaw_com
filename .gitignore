@@ -3,4 +3,5 @@
 Wordpress/
 plugins/
 
+.sass-cache/
 content/wp-content/themes/sprlaw/.sass-cache

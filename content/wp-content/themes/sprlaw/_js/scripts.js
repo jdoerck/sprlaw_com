@@ -217,6 +217,11 @@ $(document).ready(function () {
 		return link;
 	});
 
+	var atty_contact_info = $('body.mobile .span4.contact');
+	var atty_education_info = $('body.mobile .span4.contact .education')
+	$('body.mobile .span6.content').before(atty_contact_info);
+	$('body.mobile .span6.content .post-accordion-atty-bio').append(atty_education_info);
+
 //	function gridHeight () {
 //		$('.single-attorney .img').height($('.single-attorney .img').siblings('.single-attorney .content').height());
 //		$('.single-attorney .contact').height($('.single-attorney .contact').siblings('.single-attorney .content').height());

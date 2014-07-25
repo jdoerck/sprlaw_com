@@ -1,3 +1,8 @@
+need to move issues from old repository:
+
+http://stackoverflow.com/questions/9720718/how-do-i-move-an-issue-on-github-to-another-repo
+
+
 
 Setup git
 

@@ -17,7 +17,7 @@
 		  media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet'
 		  type='text/css'>
-	<link href="<?php bloginfo('template_directory'); ?>/sass/style.css" rel="stylesheet" media="screen">
+	<link href="<?php bloginfo('template_directory'); ?>/_css/style.css" rel="stylesheet" media="screen">
 
 	<!--[if lte IE 8]>
 	<script src="<?php echo bloginfo('template_directory'); ?>/_js/html5shiv.min.js" type="text/javascript"></script>

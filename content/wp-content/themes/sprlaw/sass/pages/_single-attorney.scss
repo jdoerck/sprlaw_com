@@ -63,21 +63,63 @@ body.single-attorney .items span {
   width: 19px !important;
   height: 19px !important;
   float: left;
-
 }
 
 body.single-attorney .items span:hover {
   text-decoration: none;
 }
 
-body.single-attorney .contact_info.email span {
-  background-position: -275px -66px;
+body.single-attorney .contact_info {
+  padding: 15px 15px;
+  border-top: 3px solid #31474f;
+  border-bottom: 3px solid #253a42;
+
+  &.email span {
+	background-position: -275px -66px;
+  }
+
+  &.phone span {
+	background-position: -250px -67px;
+  }
+
+  &.vcard span {
+	background-position: -306px -65px;
+  }
+  &.linkedin  {
+	padding-left: 45px;
+  }
+
+  a {
+	font-size: 1.1em;
+	border: 0;
+	line-height: 30px;
+	font-weight: bold;
+	color: #00ADEE !important;
+  }
 }
 
-body.single-attorney .contact_info.phone span {
-  background-position: -250px -67px;
+
+body.single-attorney .span4.contact {
+  min-height: 800px;
+  margin-right: 0;
+  background: url("../_i/bkg_grid.png") repeat-x;
+  height: 800px;
+  .items {
+	background-color: #2c424a;
+	background-image: none;
+  }
+  .education {
+	background-color: #23383f;
+	padding: 10px;
+	li, p {
+	  font-size: 14px;
+	}
+	h5:first-child {
+	  margin-top: 0;
+	}
+  }
 }
 
-body.single-attorney .contact_info.vcard span {
-  background-position: -306px -65px;
+body.single-attorney .span6.content {
+  width: 515px;
 }
