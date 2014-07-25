@@ -1,7 +1,12 @@
 
 RewriteEngine On
 
+
 RewriteRule ^(.*).shtml$ http://www.sprlaw.com/ [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule "(^|/)\.(?!well-known)" - [F]
 
 
 # RewriteCond %{HTTP_HOST} ^blog.sprlaw.com$ [OR]
