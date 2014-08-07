@@ -55,23 +55,6 @@ $(document).ready(function () {
 		});
 	});
 
-//	$('a#less_results').waitUntilExists(function() {
-//		$('a#less_results').click(function () {
-//			var url = $(this).attr('href');
-//			$('.main_results_link').html('');
-//			$.ajax({
-//				url: url
-//			}).done(function( html ) {
-//				$('.main_results_link').append( html );
-//				$('.show_more_results').hide();
-//				$('.featured_results').html('Results').addClass('results');
-//			});
-//			return false;
-//			$("#result_table").tablesorter( {sortList: [[2,1]]} );
-//			$('.main_results_link').hide().fadeIn("fast");
-//
-//		});
-//	});
 
 	$("#main_links a.show_subnav").click(function (event) {
 
@@ -236,10 +219,11 @@ $(document).ready(function () {
 		return link;
 	});
 
-	var atty_contact_info = $('body.mobile .span4.contact');
-	var atty_education_info = $('body.mobile .span4.contact .education')
-	$('body.mobile .span6.content').before(atty_contact_info);
-	$('body.mobile .span6.content .post-accordion-atty-bio').append(atty_education_info);
+	move_atty_info();
+	$( window ).resize(function() {
+		move_atty_info();
+	});
+
 
 //	function gridHeight () {
 //		$('.single-attorney .img').height($('.single-attorney .img').siblings('.single-attorney .content').height());
@@ -266,6 +250,24 @@ $(document).ready(function () {
 //	});
 
 });
+
+function move_atty_info() {
+
+	var atty_contact_info = $('.span4.contact');
+	var atty_education_info = $('.span4.contact .education')
+	$('body.mobile .span6.content').before(atty_contact_info);
+	$('body.mobile .span6.content .post-accordion-atty-bio').append(atty_education_info);
+
+
+
+	if ($(window).width() <= 979) {
+		$(atty_contact_info).insertAfter($('.span6.content h4.expertise-title'));
+		$('.span6.content .post-accordion-atty-bio').append(atty_education_info);
+	} else {
+		$(atty_contact_info).insertAfter($('.span6.content'));
+		$('.span6.content .post-accordion-atty-bio .education').append($('.span4.content'));
+	}
+}
 
 /* ===================================================
  * bootstrap-transition.js v2.3.2

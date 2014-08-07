@@ -1940,10 +1940,11 @@ div.post-accordion-atty-bio ul li {
 /* RYAN'S ADDITIONS 05-05-2014
 ----------------------------------*/
 #content .span12 {
-  width: 950px;
-  padding-left: -5px;
-  border: 0px solid red;
+//  width: 950px;
+//  padding-left: -5px;
+//  border: 0px solid red;
 }
+
 
 article .page-header img.photo {
   float: left;
@@ -1998,6 +1999,22 @@ body.page-id-2575 p {
 	margin-left: 0;
 	width: 32%;
   }
+
+  body.single-attorney {
+	.span4.contact {
+	  float: none;
+	  width: 100%;
+	  height: auto;
+	  min-height: auto !important;
+	  background: transparent;
+	  margin-bottom: 20px;
+	}
+	.expertise-content {
+	  margin-top: 20px;
+	}
+  }
+
+
 }
 
 @media (max-width: 767px) {
@@ -2013,6 +2030,27 @@ body.page-id-2575 p {
   body.page-id-2575 .contacts div.email {
 	width: 100%;
 	border-bottom: 0px solid #2f4953;
+  }
+  body.single-attorney {
+	.span2.img {
+	  background: transparent;
+	}
+	.span6.content {
+		width: 100%;
+		margin-right: 0;
+	  .expertise-content {
+		padding-top: 20px !important;
+	  }
+	  ul, ol {
+		margin: 0 !important;
+	  }
+	}
+	.span4.contact {
+		float: none !important;
+	  .items {
+		padding: 0 !important;
+	  }
+	}
   }
 }
 
