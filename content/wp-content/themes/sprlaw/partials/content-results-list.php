@@ -8,17 +8,6 @@ $table_content = '';
 $mobile_content = '';
 $list_post_type = 'result';
 
-//$args = array(
-//	'child_of'   => get_field('listing_parent_id'),
-//	'orderby' => 'title',
-//	'include' => '5, 20, 60',
-//	'hide_empty' => 0
-//);
-//$categories = get_categories($args);
-//
-//// The Loop
-//foreach ($categories as $category) {
-
 	if ($ajax == 'true' && $all != 'true'):
 		$result_args = array(
 			'posts_per_page' => -1,
@@ -45,8 +34,6 @@ $list_post_type = 'result';
 	else:
 		$result_args = array(
 			'posts_per_page' => -1,
-//			'orderby' => 'title',
-//			'order' => 'DESC',
 			'post_type'  => 'result',
 			'post_status' => 'publish',
 					'orderby'  => 'meta_value',
@@ -67,11 +54,8 @@ $list_post_type = 'result';
 	foreach ($myposts as $post) :  setup_postdata($post);
 			$result_category     = get_field('result_category');
 
-		if(is_mobile() && $ajax == 'true'):
+		if ($ajax == 'true'):
 			$mobile_content .= '<option value="' . get_permalink() . '">' . get_the_title() . '</option>';
-		endif;
-
-		if($ajax == 'true'):
 			$table_content .= '
 			<tr>
 				<td><a href="' . get_permalink() . '">' . get_the_title() . '</a></td>
@@ -181,15 +165,12 @@ $list_post_type = 'result';
 
 //Display content
 
-if (is_mobile() && $ajax == 'true'): ?>
+if ($ajax == 'true'): ?>
+	<html><body>
 	<select name="result" class="mobile-select">
 		<option value="">-- choose --</option>
 		<?php echo $mobile_content; ?>
 	</select>
-<?php
-elseif ($ajax == 'true'): ?>
-	<html><body>
-
 	<table border="0" cellspacing="0" cellpadding="0" style="width: 100%" id="result_table" class="tablesorter table-spr"><thead><tr><th class="featured_results ">Featured Results</th><th class="category ">Category</th><th class="date ">Year</th><th class="location ">Location</th></tr></thead><tbody>
 		<?php echo $table_content; ?>
 	</tbody>

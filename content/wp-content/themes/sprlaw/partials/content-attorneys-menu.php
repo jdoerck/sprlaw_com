@@ -112,17 +112,13 @@ $args3 = array(
         $mobile_content .= '<option value="' . (get_permalink()) . '">' . get_the_title() . '</option>';
 
     endwhile;
-    wp_reset_query();
+    wp_reset_query(); ?>
 
+<select name="attorney" class="mobile-select">
+	<option value="">-- choose an attorney --</option>
+	<?php echo $mobile_content; ?>
+</select>
 
-if (is_mobile()): ?>
-
-    <select name="attorney" class="mobile-select">
-        <option value="">-- choose an attorney --</option>
-        <?php echo $mobile_content; ?>
-    </select>
-
-<?php else: ?>
 <table border="0" cellspacing="0" cellpadding="0" id="result_table" class="table-spr attorney principal first">
     <thead>
         <th>Principals</th>
@@ -155,8 +151,5 @@ if (is_mobile()): ?>
     <?php echo $counsel_content; ?>
     </tbody>
 </table>
-
-<?php endif; ?>
-
 
 
