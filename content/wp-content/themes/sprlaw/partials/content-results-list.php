@@ -62,14 +62,10 @@ $list_post_type = 'result';
 
 		);
 	endif;
+
 	$myposts = get_posts($result_args);
 	foreach ($myposts as $post) :  setup_postdata($post);
 			$result_category     = get_field('result_category');
-
-//			$the_result_category = '';
-//			foreach ($result_category as $a_category) {
-//				$the_result_category .= get_cat_name($result_category[0]);
-//			}
 
 		if(is_mobile() && $ajax == 'true'):
 			$mobile_content .= '<option value="' . get_permalink() . '">' . get_the_title() . '</option>';
@@ -192,15 +188,25 @@ if (is_mobile() && $ajax == 'true'): ?>
 	</select>
 <?php
 elseif ($ajax == 'true'): ?>
+	<html><body>
+
 	<table border="0" cellspacing="0" cellpadding="0" style="width: 100%" id="result_table" class="tablesorter table-spr"><thead><tr><th class="featured_results ">Featured Results</th><th class="category ">Category</th><th class="date ">Year</th><th class="location ">Location</th></tr></thead><tbody>
 		<?php echo $table_content; ?>
 	</tbody>
 	<tfoot>
-	<tr><td colspan="4" class="show_more_results"><a href="/results/" id="more_results">+ More Results</a></td></tr>
+	<?php
+	if ($all == 'true') {
+		$how_many = '<tr><td colspan="4" class="show_less_results"><a href="/results/?ajax=true" id="less_results">- Less Results</a></td></tr>';
+	} else {
+		$how_many = '<tr><td colspan="4" class="show_more_results"><a href="/results/?ajax=true&all=true" id="more_results">+ More Results</a></td></tr>';
+	}
+	echo $how_many;
+	?>
 	</tfoot>
 	</table>
 	<hr />
 	<a href="/results" class="view_all">View All On Single Page</a>
+	</body></html>
 <?php else:
 	get_header(); ?>
 	<div class="content-page"><div class="content-row"><div class="gradyizer"><div class="container hold row <?php if(is_mobile()){ echo 'mobile'; } ?><?php if(is_ipad()){ echo 'ipad'; } ?>">
@@ -208,6 +214,7 @@ elseif ($ajax == 'true'): ?>
 	<div class="span8">
 	<h1 class="title-client">Results</h1>
 	<?php the_content() ?>
+
 
 	<?php
 

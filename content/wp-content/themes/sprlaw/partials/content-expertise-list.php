@@ -116,7 +116,7 @@ if ($ajax == 'true' && is_mobile()): ?>
 	</select>
 
 <?php elseif($ajax == 'true'): ?>
-
+<html><body>
 	<table border="0" cellspacing="0" cellpadding="0" id="result_table" class="table-spr expertise environmental">
 		<thead>
 		<tr><th>Environmental Law &amp; Litigation</th></tr>
@@ -144,7 +144,7 @@ if ($ajax == 'true' && is_mobile()): ?>
 		</thead>
 		<?php echo $other_expertise; ?>
 	</table>
-
+</body></html>
 <?php
 else:
 get_header(); ?>

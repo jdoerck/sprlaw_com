@@ -81,10 +81,7 @@ if (is_mobile()): ?>
 		$i++;
 	}
 ?>
-	<style>
-
-
-	</style>
+<html><body>
 <div class="atty_list">
 <table border="0" cellspacing="0" cellpadding="0" id="result_table" class="table-spr attorney principal first">
 	<thead>
@@ -121,6 +118,7 @@ if (is_mobile()): ?>
 	</tbody>
 </table>
 	</div>
+</body></html>
 <?php else :
 get_header(); ?>
 <div class="content-page"><div class="content-row"><div class="gradyizer"><div class="container hold row <?php if(is_mobile()){ echo 'mobile'; } ?><?php if(is_ipad()){ echo 'ipad'; } ?>">

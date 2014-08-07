@@ -1,6 +1,34 @@
 <a name="#secondary"></a>
 <div id="sidebar">
-	<?php include('searchform.php'); ?>
+
+		<form id="searchform" class="form-search feedburner" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=sprlaw', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+			<label for="s" class="assistive-text hidden">Receive Blog Updates via email</label>
+			<div class="input-append">
+				<input id="s" class="form-control search-field span2 search-query" type="text" value="email" onfocus="if(this.value=='Your email here')this.value='';" onblur="if(this.value=='')this.value='email'" name="email">
+				<button type="submit" id="searchsubmit" class="btn btn-default btn-submit btn btn-primary">Subscribe</button>
+				<input type="hidden" value="sprlaw" name="uri">
+				<input type="hidden" name="loc" value="en_US">
+			</div>
+			<h5 class="sidebartitle updates">Receive Blog Updates via email</h5>
+		</form>
+
+	<hr />
+
+	<p><a href="http://feeds.feedburner.com/sprlaw" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/sprlaw" rel="alternate" type="application/rss+xml">Subscribe to the blog</a></p>
+
+	<hr />
+
+	<?php
+
+
+	// dynamic_sidebar('Feedburner');
+
+	include('searchform.php');
+
+	?>
+
+	<hr />
+
 	<h5 class="sidebartitle"><?php _e('Categories'); ?></h5>
 	<ul class="list-cat unstyled">
 		<?php

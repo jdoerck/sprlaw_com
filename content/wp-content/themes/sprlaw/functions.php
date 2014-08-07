@@ -66,6 +66,17 @@ register_sidebar(array(
 ));
 
 
+register_sidebar(array(
+	'name' => __( 'Feedburner' ),
+	'id' => 'feedburner',
+	'description' => __( 'Widgets in this area will be shown on the right column of blog pages.' ),
+	'before_widget' => '',
+	'after_widget' => ''
+//,
+//	'before_title' => '<h3 class="widget-title">',
+//	'after_title' => '</h3>'
+));
+
 //register_sidebar(array(
 //    'name' => __( 'Honors Tab, Header' ),
 //    'id' => 'honors-tab',

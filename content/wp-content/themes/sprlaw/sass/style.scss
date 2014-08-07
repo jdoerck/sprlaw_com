@@ -415,6 +415,7 @@ body.single-attorney img.bio_pic {
   color: #373737;
 }
 
+
 .header {
 //  background-image: url(images/header_final.jpg);
   background-repeat: no-repeat;
@@ -488,7 +489,6 @@ a:hover {
 }
 
 
-
 #searchform #searchsubmit {
   width: 40px;
   text-align: center;
@@ -513,6 +513,7 @@ a:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555f65', endColorstr='#101a1f', GradientType=0); /* IE6-9 */
 }
 
+
 #searchform #searchsubmit:hover {
   background: #ea9998; /* Old browsers */
   background: -moz-linear-gradient(top, #ea9998 0%, #9a4b4b 23%, #894343 55%, #9a4b4b 100%); /* FF3.6+ */
@@ -524,6 +525,7 @@ a:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ea9998', endColorstr='#9a4b4b', GradientType=0); /* IE6-9 */
 }
 
+
 #searchform #s {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -532,7 +534,8 @@ a:hover {
   text-transform: uppercase;
   color: #999;
   letter-spacing: .2em;
-  width: 200px;
+  width: 151px;
+//  width: 200px;
 }
 
 .container.mobile #searchform {
@@ -544,6 +547,22 @@ a:hover {
 .container.mobile #searchform #searchsubmit {
   width: 10%;
 }
+
+#searchform.feedburner {
+  margin-bottom: 0;
+
+  #s {
+	width: 115px;
+  }
+  #searchsubmit {
+	width: 80px !important;
+  }
+  h5.sidebartitle {
+	margin-top: 6px;
+  }
+}
+
+
 
 .form-search .input-append {
   width: 100%;
@@ -1811,7 +1830,27 @@ body p.wp-caption-text {
 #main_links_info {
   border-bottom: 1px solid #213740;
   padding: 20px 20px 20px 20px;
-z-index: 1000;
+  z-index: 1000;
+  .main_results_link {
+	a#more_results, a#less_results {
+	  font-weight: normal;
+	  font-style: italic;
+	}
+	a#more_results:hover, a#less_results:hover {
+	  color: #FFF;
+	}
+
+	a.view_all {
+	  font-weight: bold;
+	  text-transform: uppercase;
+	}
+	a.view_all:hover {
+	  text-decoration: underline;
+	}
+	hr {
+	  border-top: 1px solid #2f4953;
+	}
+  }
 }
 
 #dropdown_bkg {

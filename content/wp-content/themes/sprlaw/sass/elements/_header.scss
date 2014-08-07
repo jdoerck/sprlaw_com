@@ -426,25 +426,27 @@ body.mobile #quick_links.nav-tabs li.careers a {
   background-position: 35px 22px;
 }
 
-#main_links_info .main_results_link a#more_results {
-  font-weight: normal;
-  font-style: italic;
-}
-#main_links_info .main_results_link a#more_results:hover {
-  color: #FFF;
-}
+#main_links_info {
+  .main_results_link {
+	a#more_results, a#less_results {
+	  font-weight: normal;
+	  font-style: italic;
+	}
+	a#more_results:hover, a#less_results:hover {
+	  color: #FFF;
+	}
 
-#main_links_info  .main_results_link hr {
-  border-top: 1px solid #2f4953;
-}
-
-#main_links_info .main_results_link a.view_all {
-  forn-weight: bold;
-  text-transform: uppercase;
-}
-
-#main_links_info .main_results_link a.view_all:hover {
-  text-decoration: underline;
+	a.view_all {
+	  font-weight: bold;
+	  text-transform: uppercase;
+	}
+	a.view_all:hover {
+	  text-decoration: underline;
+	}
+	hr {
+	  border-top: 1px solid #2f4953;
+	}
+  }
 }
 
 #grey-out.active {
