@@ -1,1 +1,7 @@
 #wpcontent select[multiple] {height: 400px;}
+
+#acf-attorney_recognitions, #acf-attorney_experience, #acf-attorney_clients, #acf-attorney_affiliations, #acf-attorney_affiliations_activities, #acf-attorney_activities, #acf-attorney_public_offices,
+#acf-attorney_lectures, #acf-attorney_lectures_seminars, #acf-attorney_public_offices, #acf-attorney_lectures, #acf-attorney_lectures_seminars, #acf-attorney_seminars, #acf-attorney_military_service,
+#acf-attorney_presentations, #acf-attorney_presentations_panels, #acf-attorney_publications, #acf-attorney_clerkship, #acf-attorney_community {
+	display: none;
+}

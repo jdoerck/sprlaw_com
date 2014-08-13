@@ -13,8 +13,6 @@ $ID = get_the_ID();
 $theID = get_the_ID();
 $expertise_category = wp_get_post_parent_id();
 
-
-
 global $post;
 
 ?>

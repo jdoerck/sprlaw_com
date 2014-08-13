@@ -4,7 +4,7 @@
 		<form id="searchform" class="form-search feedburner" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=sprlaw', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
 			<label for="s" class="assistive-text hidden">Receive Blog Updates via email</label>
 			<div class="input-append">
-				<input id="s" class="form-control search-field span2 search-query" type="text" value="email" onfocus="if(this.value=='Your email here')this.value='';" onblur="if(this.value=='')this.value='email'" name="email">
+				<input id="s" class="form-control search-field span2 search-query" type="search" name="email" placeholder="Email">
 				<button type="submit" id="searchsubmit" class="btn btn-default btn-submit btn btn-primary">Subscribe</button>
 				<input type="hidden" value="sprlaw" name="uri">
 				<input type="hidden" name="loc" value="en_US">
@@ -19,9 +19,6 @@
 	<hr />
 
 	<?php
-
-
-	// dynamic_sidebar('Feedburner');
 
 	include('searchform.php');
 

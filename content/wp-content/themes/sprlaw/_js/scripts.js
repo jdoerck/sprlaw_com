@@ -224,6 +224,18 @@ $(document).ready(function () {
 		move_atty_info();
 	});
 
+//	$search_box = $("#s");
+
+	// If the user clicks the input box and the text is "search here!",
+	//    set it to blank
+	$("#s").click(function() {
+		if( $search_box.attr("value") == "search here!" ) {
+
+			// Set it to an empty string
+			$search_box.attr("value", "");
+		}
+	});
+
 
 //	function gridHeight () {
 //		$('.single-attorney .img').height($('.single-attorney .img').siblings('.single-attorney .content').height());

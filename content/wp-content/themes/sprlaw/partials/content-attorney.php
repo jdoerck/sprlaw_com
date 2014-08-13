@@ -87,129 +87,29 @@ endif;
 						<div>
 							<div class="expertise-content main-content content-toggle">
 								<?php the_content(); ?>
+
+								<?php if (strlen($attorney_blogposts) > 0): ?>
+									<h5>Blog Posts</h5>
+									<div class="expertise-content blogposts">
+										<ul class="blog_posts">
+											<?php echo $attorney_blogposts; ?>
+										</ul>
+									</div>
+								<?php endif; ?>
+								<?php if ($attorney_results): ?>
+									<h5>Results</h5>
+									<div class="expertise-content results">
+										<ul class="unstyled">
+											<?php foreach ($attorney_results as $post): // variable must be called $post (IMPORTANT) ?>
+												<?php setup_postdata($post); ?>
+												<li><a href="<?php the_permalink(); ?>" class="blue-link"><?php the_title(); ?></a></li>
+											<?php endforeach; ?>
+										</ul>
+									</div>
+									<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+								<?php endif; ?>
+
 							</div>
-						</div>
-						<div class="post-accordion-atty-bio">
-							<?php if (strlen($attorney_experience) > 0): ?>
-								<h5>Results</h5>
-								<div class="expertise-content results">
-									<?php echo $attorney_experience; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_recognitions) > 0): ?>
-								<h5>Recognitions</h5>
-								<div class="expertise-content recognitions">
-									<p>
-										<?php echo $attorney_recognitions; ?>
-									</p>
-								</div>
-							<?php endif;
-
-							if (strlen($attorney_clients) > 0): ?>
-								<h5>Clients</h5>
-								<div class="expertise-content clients">
-									<?php echo $attorney_clients; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_affiliations) > 0): ?>
-								<h5>Affiliations</h5>
-								<div class="expertise-content affiliations">
-									<?php echo $attorney_affiliations; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_affiliations_activities) > 0): ?>
-								<h5>Affiliations/Activities</h5>
-								<div class="expertise-content affil_activ">
-									<?php echo $attorney_affiliations_activities; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_activities) > 0): ?>
-								<h5>Activities</h5>
-								<div class="expertise-content activities">
-									<?php echo $attorney_activities; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_public_offices) > 0): ?>
-								<h5>Public Offices</h5>
-								<div class="expertise-content public">
-									<?php echo $attorney_public_offices; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_seminars) > 0): ?>
-								<h5>Seminars</h5>
-								<div class="expertise-content seminars">
-									<?php echo $attorney_seminars; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_lectures_seminars) > 0): ?>
-								<h5>Lectures &amp; Seminars</h5>
-								<div class="expertise-content lectures_seminars">
-									<?php echo $attorney_lectures_seminars; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_military_service) > 0): ?>
-								<h5>Military Service</h5>
-								<div class="expertise-content military">
-									<?php echo $attorney_military_service; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_presentations) > 0): ?>
-								<h5>Presentations</h5>
-								<div class="expertise-content presentations">
-									<?php echo $attorney_presentations; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_presentations_panels) > 0): ?>
-								<h5>Presentations and Panels</h5>
-								<div class="expertise-content pres_panel">
-									<?php echo $attorney_presentations_panels; ?>
-								</div>
-							<?php endif;
-							if (strlen($attorney_publications) > 0): ?>
-								<h5>Publications</h5>
-								<div class="expertise-content publications">
-									<?php echo $attorney_publications; ?>
-								</div>
-							<?php endif; ?>
-							<?php
-							if (strlen($attorney_clerkship) > 0): ?>
-
-								<h5>Clerkship</h5>
-								<div class="expertise-content clerkship">
-									<?php echo $attorney_clerkship; ?>
-								</div>
-
-							<?php endif;
-							if (strlen($attorney_community) > 0): ?>
-
-								<h5>Community</h5>
-								<div class="expertise-content community">
-									<?php echo $attorney_community; ?>
-								</div>
-
-							<?php endif;
-							if (strlen($attorney_blogposts) > 0): ?>
-
-								<h5>Blog Posts</h5>
-								<div class="expertise-content blogposts">
-									<ul class="blog_posts">
-										<?php echo $attorney_blogposts; ?>
-									</ul>
-								</div>
-
-							<?php endif;
-							if ($attorney_results): ?>
-								<h5>Results</h5>
-								<div class="expertise-content results">
-									<ul class="unstyled">
-										<?php foreach ($attorney_results as $post): // variable must be called $post (IMPORTANT) ?>
-											<?php setup_postdata($post); ?>
-											<li><a href="<?php the_permalink(); ?>" class="blue-link"><?php the_title(); ?></a></li>
-										<?php endforeach; ?>
-									</ul>
-								</div>
-								<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-							<?php endif; ?>
 						</div>
 
 					</div>
