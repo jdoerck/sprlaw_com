@@ -5,7 +5,7 @@ $ajax = $_GET['ajax'];
 	$args = array(
 		'post_type'			=> 'expertise',
 		'posts_per_page'	=> -1,
-		'orderby' 			=> 'menu_order',
+		'orderby' 			=> 'title',
 		'order'     		=> 'ASC',
 		'post__not_in'		=> array( 2246, 2253, 2256 )
 	);
