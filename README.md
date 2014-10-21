@@ -9,15 +9,15 @@ git remote add staging ssh://natpol3@sprlaw.com/stage.sprlaw_com.git
 
 http://toroid.org/ams/git-website-howto
 
-create dev site
+## create dev site
 
 git clone https://github.com/WordPress/WordPress.git
 
-remove .git dir from Wordpress
-
 create symbolic link of wp-config and move to Wordpress directory
 
-scp -r natpol3@sprlaw.com:sprlaw.dreamhosters.com/content/wp-content/plugins .
+Download current plugins
+
+        scp -r natpol3@sprlaw.com:sprlaw.dreamhosters.com/content/wp-content/plugins
 
 make symbolic link of plugins and move into correct place in Wordpress
 
@@ -26,6 +26,23 @@ make symbolic link of plugins and move into correct place in Wordpress
         mv -f Wordpress/wp-content/__plugins Wordpress/wp-content/plugins
 
 
+## Plugins Used
+
+* Advanced Custom Fields
+* Askimet
+* All In One SEO Pack
+* Custom Post Template
+* Custom Post Type UI
+* Featured Image
+* Font Awesome
+* Google Sitemap Generator
+* JetPack
+* Mobble
+* More Types
+* Multiple Post Thumbnails
+* Twitter Tools
+* User Photo
+* Wordpress Importer
 
 ##TODO:
 
