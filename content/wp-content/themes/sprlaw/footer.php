@@ -46,6 +46,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/_js/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/_js/scripts.min.js"></script>
-
+<!-- test -->
 </body>
 </html>
