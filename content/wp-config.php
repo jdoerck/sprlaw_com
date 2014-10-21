@@ -34,7 +34,7 @@ if ( WP_ENV == 'local' ) {
 	define('DB_CHARSET', 'utf8');
 	define('DB_COLLATE', '');
 	define('DOMAIN_CURRENT_SITE', 'local.cbsinteractive.com');
-	define( 'WP_DEBUG', true );
+	define( 'WP_DEBUG', false );
 } elseif ( WP_ENV == 'stage' ) {
 	## Currently not set
 } elseif ( WP_ENV == 'prod' ) {
