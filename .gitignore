@@ -5,3 +5,27 @@ plugins/
 
 .sass-cache/
 content/wp-content/themes/sprlaw/.sass-cache
+
+Wordpress
+
+content/index.php
+content/license.txt
+content/readme.html
+content/wp-activate.php
+content/wp-admin/
+content/wp-blog-header.php
+content/wp-comments-post.php
+content/wp-config-sample.php
+content/wp-cron.php
+content/wp-includes/
+content/wp-links-opml.php
+content/wp-load.php
+content/wp-login.php
+content/wp-mail.php
+content/wp-settings.php
+content/wp-signup.php
+content/wp-trackback.php
+content/xmlrpc.php
+
+content/wp-content/plugins
+content/wp-content/uploads

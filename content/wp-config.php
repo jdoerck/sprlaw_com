@@ -14,51 +14,40 @@
  * @package WordPress
  */
 
-if ($_SERVER['HTTP_HOST'] == 'dev.sprlaw.com') {
-    // ** MySQL settings - You can get this info from your web host ** //
-    /** The name of the database for WordPress */
-    define('DB_NAME', 'sprlaw_dreamhosters_com_dev');
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', '/home/natpol3/sprlaw.dreamhosters.com/content/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 
-    /** MySQL database username */
-    define('DB_USER', 'd4g65atp');
-
-    /** MySQL database password */
-    define('DB_PASSWORD', 'MYfn23U8');
-
-    /** MySQL hostname */
-    define('DB_HOST', 'mysql-1.sprlaw.dreamhosters.com');
-
-    /** Database Charset to use in creating database tables. */
-    define('DB_CHARSET', 'utf8');
-
-    /** The Database Collate type. Don't change this if in doubt. */
-    define('DB_COLLATE', '');
-
-	define('WP_SITEURL', 'http://dev.sprlaw.com');
-	define('WP_HOME', 'http://dev.sprlaw.com');
-
-
+// These setting enable the site to work in different envs
+if ($_SERVER['HTTP_HOST'] == 'local.sprlaw.com') {
+	define('WP_ENV', 'local');
+} elseif ($_SERVER['HTTP_HOST'] == 'stage.sprlaw.com') {
+	define('WP_ENV', 'stage');
 } else {
-
-// ** MySQL settings - You can get this info from your web host ** //
-    /** The name of the database for WordPress */
-    define('DB_NAME', 'sprlaw_dreamhosters_com_2');
-
-    /** MySQL database username */
-    define('DB_USER', 'd4g65atp');
-
-    /** MySQL database password */
-    define('DB_PASSWORD', 'MYfn23U8');
-
-    /** MySQL hostname */
-    define('DB_HOST', 'mysql-1.sprlaw.dreamhosters.com');
-
-    /** Database Charset to use in creating database tables. */
-    define('DB_CHARSET', 'utf8');
-
-    /** The Database Collate type. Don't change this if in doubt. */
-    define('DB_COLLATE', '');
+	define('WP_ENV', 'prod');
 }
+
+if ( WP_ENV == 'local' ) {
+	define('DB_NAME', 'sprlaw_dreamhosters_com_2');
+	define('DB_USER', 'root');
+	define('DB_PASSWORD', 'root');
+	define('DB_HOST', 'localhost');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+	define('DOMAIN_CURRENT_SITE', 'local.cbsinteractive.com');
+	define( 'WP_DEBUG', true );
+} elseif ( WP_ENV == 'stage' ) {
+	## Currently not set
+} elseif ( WP_ENV == 'prod' ) {
+	define('DB_NAME', 'sprlaw_dreamhosters_com_2');
+	define('DB_USER', 'd4g65atp');
+	define('DB_PASSWORD', 'MYfn23U8');
+	define('DB_HOST', 'mysql-1.sprlaw.dreamhosters.com');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+	define( 'WP_DEBUG', false );
+	define('DOMAIN_CURRENT_SITE', 'www.cbsinteractive.com');
+}
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -110,13 +99,13 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
 if (!defined('ABSPATH'))
-    define('ABSPATH', dirname(__FILE__) . '/');
+	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
